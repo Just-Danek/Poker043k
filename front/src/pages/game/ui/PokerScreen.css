@@ -1,0 +1,26 @@
+.poker-screen {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #0f172a;
+  z-index: 101;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  user-select: none;
+  display: flex;
+  padding-top: var(--safe-area-inset-top);
+  padding-right: var(--safe-area-inset-right);
+  padding-bottom: var(--safe-area-inset-bottom);
+  padding-left: var(--safe-area-inset-left);
+}
+
+.poker-screen-game-area {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.poker-screen__pot-round { font-size: 0.65rem; color: #94a3b8; margin-top: 2px; }
+.poker-screen__pot-round .highlight { color: #86efac; font-weight: bold; }

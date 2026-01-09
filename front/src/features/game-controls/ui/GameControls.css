@@ -1,0 +1,51 @@
+.game-controls-actions { 
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.poker-btn { 
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.75rem; 
+    color: white;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+.poker-btn:active:not(:disabled) { transform: scale(0.96); }
+
+.poker-btn--fold { 
+    background: linear-gradient(to bottom, #dc2626, #991b1b);
+    box-shadow: 0 3px 0 #7f1d1d;
+}
+.poker-btn--check { 
+    background: linear-gradient(to bottom, #64748b, #475569);
+    box-shadow: 0 3px 0 #334155;
+}
+.poker-btn--call { 
+    background: linear-gradient(to bottom, #16a34a, #15803d);
+    box-shadow: 0 3px 0 #14532d;
+}
+.poker-btn--raise { 
+    background: linear-gradient(to bottom, #d97706, #b45309);
+    box-shadow: 0 3px 0 #78350f;
+}
+
+.poker-btn:disabled {
+    opacity: 0.5;
+    filter: grayscale(1);
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none;
+}
+
+@media (max-height: 380px) {
+    .poker-btn {
+        padding: 8px 0;
+        font-size: 0.7rem;
+    }
+}

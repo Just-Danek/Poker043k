@@ -1,0 +1,23 @@
+.poker-table-ring {
+    position: relative;
+    width: 62vw; 
+    height: 55dvh;
+    max-width: 650px;
+    max-height: 380px;
+}
+
+.poker-table-surface {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #047857 0%, #064e3b 100%);
+    border-radius: 160px;
+    border: 8px solid #3f2e18;
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.8), 0 20px 40px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-height: 380px) {
+    .poker-table-ring { height: 65dvh; width: 55vw; }
+}

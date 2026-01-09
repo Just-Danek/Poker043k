@@ -1,0 +1,93 @@
+.poker-player-seat {
+    position: absolute;
+    width: 80px;
+    display: flex; flex-direction: column; 
+    align-items: center;
+    z-index: 10;
+}
+
+.poker-player-avatar {
+    width: 100%;
+    position: relative;
+    padding: 6px 4px;
+    text-align: center;
+    border-radius: 12px;    
+    background: transparent; 
+    border: none; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);    
+    z-index: 1; 
+    transition: opacity 0.3s;
+}
+
+.poker-player-avatar.folded, 
+.poker-player-avatar.offline {
+    opacity: 0.5; 
+    filter: grayscale(1);
+}
+
+.poker-player-avatar::before {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    border-radius: 15px;
+    top: -3px; left: -3px; right: -3px; bottom: -3px;
+    background: #475569; 
+}
+
+.poker-player-avatar.timer-active::before {
+    background: conic-gradient(
+        #fbbf24 var(--timer-progress), 
+        transparent 0
+    );
+    animation: border-timer 30s linear forwards;
+}
+
+.poker-player-avatar::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 12px;
+    background: #1e293b; 
+}
+
+.seat-hero { 
+    bottom: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+.seat-left { 
+    top: 50%;
+    left: -50px;
+    transform: translateY(-50%);
+}
+.seat-right { 
+    top: 50%;
+    right: -50px;
+    transform: translateY(-50%);
+}
+.seat-top { 
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.seat-top-left { 
+    top: -35px;
+    left: 10%;
+}
+.seat-top-right { 
+    top: -35px;
+    right: 10%;
+}
+
+@property --timer-progress {
+    syntax: '<angle>';
+    initial-value: 360deg;
+    inherits: false;
+}
+
+@keyframes border-timer {
+    from { --timer-progress: 360deg; }
+    to { --timer-progress: 0deg; }
+}

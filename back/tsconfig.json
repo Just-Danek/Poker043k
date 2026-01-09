@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    /* Основные настройки */
+    "target": "es2016",
+    "module": "commonjs",             /* Важно: компилируем в старый формат, который понимает Node */
+    "moduleResolution": "node",       /* Важно: стратегия поиска модулей как в Node */
+    "esModuleInterop": true,          /* Важно: позволяет делать import express from 'express' */
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "outDir": "./dist",               /* Куда складывать скомпиленные файлы */
+    
+    /* Та самая настройка, которая вызывала ошибку - выключаем или убираем её */
+    "verbatimModuleSyntax": false
+  },
+  "include": ["src/**/*"]
+}

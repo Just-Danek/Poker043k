@@ -1,0 +1,14 @@
+#root {
+  min-height: 100vh;
+  padding-top: var(--safe-area-inset-top);
+  padding-right: var(--safe-area-inset-right);
+  padding-bottom: var(--safe-area-inset-bottom);
+  padding-left: var(--safe-area-inset-left);
+}
+
+.app-shell {
+  min-height: 100vh;
+  color: #fef3c7;
+  background-color: #020617;
+  touch-action: manipulation;
+}

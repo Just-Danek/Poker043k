@@ -1,0 +1,28 @@
+
+.combo-list { 
+    padding: 0 15px 15px; 
+    overflow-y: auto; 
+}
+
+.combo-row { 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.combo-row:last-child { 
+    border-bottom: none;
+}
+
+.combo-name { 
+    color: #fbbf24;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.combo-desc { 
+    color: #94a3b8;
+    font-size: 0.75rem;
+    text-align: right;
+}

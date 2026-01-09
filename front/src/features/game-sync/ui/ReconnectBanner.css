@@ -1,0 +1,49 @@
+.reconnect-banner {
+    position: fixed;
+    bottom: calc(16px + var(--safe-area-inset-bottom));
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(15, 23, 42, 0.95);
+    color: #fff;
+    border: 1px solid rgba(248, 113, 113, 0.6);
+    border-radius: 12px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    z-index: 30000;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    max-width: 90%;
+}
+
+.reconnect-banner__text {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    gap: 4px;
+}
+
+.reconnect-banner__button {
+    border: none;
+    border-radius: 999px;
+    padding: 8px 16px;
+    background: #f87171;
+    color: #0f172a;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.reconnect-banner__button:hover {
+    opacity: 0.85;
+}
+
+.reconnect-banner__button:disabled {
+    cursor: wait;
+    opacity: 0.6;
+}
+
+.reconnect-banner__button:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.8);
+    outline-offset: 2px;
+}

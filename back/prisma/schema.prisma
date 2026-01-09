@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url = env("DATABASE_URL")
+}
+
+model UserStats {
+  userId        BigInt  @id
+  totalGames    Int     @default(0)
+  wins          Int     @default(0)
+  totalTurnover BigInt  @default(0)
+  bestHand      String? 
+  bestHandRank  Int     @default(0)
+}

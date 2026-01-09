@@ -1,0 +1,73 @@
+.raise-slider-container {
+  position: absolute;
+  /* Позиционируем справа от карт (настроим в PokerScreen) */
+  bottom: 20px; 
+  left: 60%; /* Сдвиг вправо от центра */
+  width: 200px;
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid #fbbf24;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 60;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  animation: slideUp 0.2s ease-out;
+}
+
+.raise-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-weight: 700;
+}
+
+.raise-label { font-size: 0.7rem; color: #94a3b8; }
+.raise-value { font-size: 1.1rem; color: #fbbf24; }
+
+/* Стили самого ползунка */
+.raise-range {
+  /* -webkit-appearance: none; */
+  width: 100%;
+  height: 6px;
+  background: #334155;
+  border-radius: 5px;
+  outline: none;
+}
+
+.raise-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fbbf24;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+}
+
+.raise-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.raise-btn {
+  border: none;
+  border-radius: 6px;
+  padding: 8px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  cursor: pointer;
+  flex: 1;
+}
+
+.raise-btn.cancel { background: #334155; color: #cbd5e1; }
+.raise-btn.all-in { background: #ef4444; color: white; font-size: 0.7rem; }
+.raise-btn.confirm { background: #10b981; color: white; }
+
+@keyframes slideUp {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

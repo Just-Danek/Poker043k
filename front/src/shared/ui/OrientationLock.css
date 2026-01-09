@@ -1,0 +1,45 @@
+.orientation-lock {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    background: #0f172a;
+    z-index: 20000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    padding-top: max(20px, var(--safe-area-inset-top));
+    padding-right: max(20px, var(--safe-area-inset-right));
+    padding-bottom: max(20px, var(--safe-area-inset-bottom));
+    padding-left: max(20px, var(--safe-area-inset-left));
+}
+
+.orientation-text { 
+    font-size: 18px; 
+    font-weight: 600; 
+    margin-bottom: 30px; 
+    color: #94a3b8; 
+}
+
+.refresh-text {
+    background: none;
+    border: none;
+    color: #fbbf24;
+    font-size: 15px;
+    text-transform: lowercase;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 4px 0;
+    transition: opacity 0.2s ease;
+}
+
+.refresh-text:hover {
+    opacity: 0.8;
+}
+
+.refresh-text:focus-visible {
+    outline: 2px solid rgba(251, 191, 36, 0.6);
+    outline-offset: 2px;
+}

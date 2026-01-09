@@ -1,0 +1,39 @@
+.exit-modal-text {
+    margin: 16px 0 24px;
+    font-size: 0.95rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.exit-modal-actions {
+    display: flex;
+    padding: 12px;
+    gap: 16px;
+}
+
+.exit-btn-cancel, .exit-btn-confirm {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.exit-btn-cancel {
+    background: transparent;
+    border: 1px solid #475569;
+    color: #cbd5e1;
+}
+
+.exit-btn-confirm {
+    background: linear-gradient(to bottom, #ef4444, #d32c2c);
+    color: white;
+}
+
+.exit-btn-cancel:active, .exit-btn-confirm:active {
+    transform: scale(0.96);
+}

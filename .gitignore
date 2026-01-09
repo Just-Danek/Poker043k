@@ -1,0 +1,11 @@
+node_modules
+front/node_modules
+back/node_modules
+.env
+front/.env
+front/.env.local
+back/.env
+*.db
+dist
+build
+.DS_Store
